@@ -12,11 +12,11 @@ function MenuOrder() {
     <div>
       <h2> page Order </h2>
       {
-        order.map(()=> {
+        order.map((order)=> {
           return(
             <div>
               {order.id}
-              {/* Page Order (Products ) الفاتولاة  */}
+            
               </div>
           )
         })

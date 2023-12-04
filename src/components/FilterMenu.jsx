@@ -17,7 +17,7 @@ function FilterMenu() {
 
   const dispatch = useDispatch();
 
-  console.log(menu)
+  // console.log(menu)
 
   useEffect(() => {
     dispatch(fetchProducts());

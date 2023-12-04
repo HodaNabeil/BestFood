@@ -8,13 +8,13 @@ import Footer from '../components/Footer';
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from 'react';
 import { fetchProducts } from '../rtk/FoodSlices/ProductsFoodSlice';
+import { addOrder } from '../rtk/FoodSlices/OrderFood';
 
 
 function Services() {
-  const menu = useSelector((state) => state.allProducts);
+  const menu = useSelector((state) => state.allProducts.products);
   const dispatch = useDispatch();
 
-  console.log(menu)
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -25,9 +25,11 @@ function Services() {
   return (
     <section className=" max-w-[1640px] m-auto p-4 pb-[0] relative overflow-hidden">
         <div className=' relative'>
-          <img  className=' object-cover w-full h-[500px] rounded-[8px]' src= {hero} alt="hero_img" />
+          <img  className=' object-cover w-full h-[500px] rounded-[8px]'
+            src= {hero} alt="hero_img" />
             <div className='servies   absolute  top-[35%] left-[20%]'>
-            <h2 className='flex  justify-center  text-[#000] items-center text-[50px]  sm:text-[70px] md:text-[100px]  '>
+            <h2 className='flex  justify-center  text-[#000]
+              items-center text-[50px]  sm:text-[70px] md:text-[100px]  '>
                 delicious food
               </h2>
             </div>
@@ -39,25 +41,33 @@ function Services() {
             Services
           </h3>
           <div className='  grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
-          {/* {
-              data.map((foot)=> {
+            {
+              menu.map((food)=> {
                 return (
-                  <div key={foot.id} className=' shadow-lg   rounded-lg rounded-t-lg  relative '>
-                      <BsCartPlus size={25} className=" absolute top-0 right-0 bg-orange-600  w-[30px] h-[30px]  rounded-l-lg  p-1 cursor-pointer  text-white" />
-                      <img  className=' object-cover max-w-full h-[300px] w-full rounded-sm ' src={foot.image} alt={foot.name} />
+                  <div key={food.id} className=' shadow-lg   rounded-lg rounded-t-lg  relative '>
+                      <BsCartPlus size={25} 
+                        className=" absolute top-0 right-0 bg-orange-600  
+                        w-[30px] h-[30px]  rounded-l-lg  p-1 cursor-pointer  text-white" />
+                      <img  className=' object-cover max-w-full h-[300px] w-full rounded-sm '
+                        src={food.image} alt={food.name} />
                         <div className='flex justify-between items-center  p-2 mb-1'>
-                          <p>{foot.name}</p>
+                          <p>{food.name}</p>
                           <p>
-                            <span className="bg-orange-600 rounded-lg text-white p-1 ">{foot.price} </span>
+                            <span className="bg-orange-600 rounded-lg text-white p-1 ">
+                              {food.price}$ 
+                            </span>
                           </p>
                         </div>
-                        <button className="  text-[#f97316] m-[10px] border-[#f97316]   hover:text-[#fff] hover:bg-[#f97316]  transition duration-300">
-                          Order
+                        <button
+                        onClick={()=> {dispatch(addOrder(food))}}
+                          className="  text-[#f97316] m-[10px] border-[#f97316]  
+                          hover:text-[#fff] hover:bg-[#f97316]  transition duration-300">
+                          Add Order
                         </button>
                   </div>
                 )
             })
-          }  */}
+          }  
         </div>
         </div>
         {/* Footer */}
