@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from 'react';
-import { fetchProdcuts } from '../rtk/FoodSlices/ProductsFoodSlice';
+import { fetchProducts } from '../rtk/FoodSlices/ProductsFoodSlice';
 
 
 function Services() {
@@ -17,7 +17,7 @@ function Services() {
   console.log(menu)
 
   useEffect(() => {
-    dispatch(fetchProdcuts());
+    dispatch(fetchProducts());
   }, [dispatch]);
 
 

@@ -1,20 +1,26 @@
 import { useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux"
-import { fetchProdcuts } from "../rtk/FoodSlices/ProductsFoodSlice";
 
 import {BsCartPlus} from 'react-icons/bs'
 import { addOrder } from "../rtk/FoodSlices/OrderFood";
+import { fetchProducts } from "../rtk/FoodSlices/ProductsFoodSlice";
+
 
 
 
 function FilterMenu() {
-  const menu = useSelector((state) => state.allProducts);
+  const menu = useSelector((state) => state.allProducts.products);
+  const { status, error } = useSelector((state) => state.allProducts.products);
+
+
+  
+
   const dispatch = useDispatch();
 
   console.log(menu)
 
   useEffect(() => {
-    dispatch(fetchProdcuts());
+    dispatch(fetchProducts());
   }, [dispatch]);
 
   const [filteredMenu, setFilteredMenu] = useState(menu);
@@ -43,8 +49,17 @@ function FilterMenu() {
     setSelectedPrice(price);
     setFilteredMenu(filtered);
   };
+
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
+
+  if (status === 'failed') {
+    return <div>Error: {error}</div>;
+  }
   return (
         <div className="  max-w-[1640px] m-auto p-6">
+          
           <h2 className=' flex justify-center  mb-4 items-center m-auto text-[#f97316] 
             text-[25px] md:[35px] font-bold font_2'>Top Rated Menu Items</h2>
             <div className="flex  flex-col lg:flex-row  justify-between items-center ">

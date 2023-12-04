@@ -9,3 +9,5 @@ export const store = configureStore({
     order :  orderProduct ,
   },
 })
+
+export default store;
