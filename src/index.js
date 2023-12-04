@@ -14,10 +14,11 @@ import { Provider } from 'react-redux'
 
 import Home from './Page/Home';
 import Services from './Page/Services';
-import About from './Page/About';
+
 import Contect from './Page/Contect';
 import Header from './components/Header';
 import { store } from './rtk/Store';
+import About from './components/About';
 
 
 

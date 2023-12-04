@@ -1,0 +1,147 @@
+[
+  {
+    "id": 1,
+    "name": "Burger",
+    "price": 2,
+    "image": "/MenuImage/burger1.jpeg",
+    "category":  "burger"
+  },
+  {
+    "id": 2,
+    "name": "Burger",
+    "price": 2,
+    "image": "/MenuImage/burger2.jpeg",
+    "category":"burger"
+  },
+  {
+    "id": 3,
+    "name":  "burger",
+    "price": 3,
+    "image": "/MenuImage/burger3.jpeg",
+    "category": "burger"
+  },
+  {
+    "id": 4,
+    "name": "Burger",
+    "price": 4,
+    "image": "/MenuImage/burger4.jpeg",
+    "category":  "Burger"
+  },
+  {
+    "id": 5,
+    "name": "Burger",
+    "price": 5,
+    "image": "/MenuImage/burger5.jpeg",
+    "category":"Burger"
+  },
+  {
+    "id": 6,
+    "name": "chicken",
+    "price": 2,
+    "image": "/MenuImage/chicken2.jpeg",
+    "category": "chicken"
+  },
+  {
+    "id": 7,
+    "name": "chicken",
+    "price": 3,
+    "image": "/MenuImage/chicken3.jpeg",
+    "category": "chicken"
+  },
+  {
+    "id": 8,
+    "name": "chicken",
+    "price": 4,
+    "image": "/MenuImage/chicken4.jpeg",
+    "category":  "chicken"
+  },
+  {
+    "id": 9,
+    "name": "chicken",
+    "price": 5,
+    "image": "/MenuImage/chicken5.jpeg",
+    "category": "chicken"
+  },
+  {
+    "id": 10,
+    "name": "chicken",
+    "price": 2,
+    "image": "/MenuImage/chicken1.webp",
+    "category": "chicken"
+  },
+  {
+    "id": 11,
+    "name": "salad",
+    "price": 2,
+    "image": "/MenuImage/salad2.jpeg",
+    "category": "salad"
+  },
+  {
+    "id": 12,
+    "name": "salad",
+    "price": 3,
+    "image": "/MenuImage/salad1.jpeg",
+    "category": "salad"
+  },
+  {
+    "id": 13,
+    "name": "salad",
+    "price": 4,
+    "image": "/MenuImage/salad4.jpeg",
+    "category": "salad"
+  },
+  {
+    "id": 14,
+    "name": "salad",
+    "price": 2,
+    "image": "/MenuImage/salad5.webp",
+    "category": "salad"
+  },
+  {
+    "id": 15,
+    "name": "salad",
+    "price": 5,
+    "image": "/MenuImage/salad3.webp",
+    "category":  "salad"
+  },
+  {
+    "id": 16,
+    "name": "pizza",
+    "price": 2,
+    "image": "/MenuImage/pizza2.jpeg",
+    "category":  "pizza"
+  }
+  ,
+  {
+    "id": 17,
+    "name": "pizza",
+    "price": 3,
+    "image":  "/MenuImage/pizza1.jpeg",
+    "category":  "pizza"
+  }
+  ,
+  {
+    "id": 18,
+    "name": "pizza",
+    "price": 4,
+    "image":"/MenuImage/pizza4.jpeg",
+    "category":  "pizza"
+  }
+  ,
+  {
+    "id": 19,
+    "name":"pizza",
+    "price": 5,
+    "image": "/MenuImage/pizza33.avif",
+    "category": "pizza"
+  }
+  ,
+  {
+    "id": 20,
+    "name": "pizza",
+    "price": 5,
+    "image": "/MenuImage/pizza5.jpeg",
+    "category": "pizza"
+  }
+
+]

@@ -3,7 +3,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const fetchProdcuts = createAsyncThunk('productsSlice/fetchProdcuts', async () => {
   try {
-    const res = await fetch('productfood.json');
+    const res = await fetch('/Menu.json');
     if (!res.ok) {
       throw new Error('Failed to fetch products');
     }

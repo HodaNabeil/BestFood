@@ -3,7 +3,7 @@ import { useState } from "react";
 import {NavLink} from 'react-router-dom'
 
 function Header() {
-const [link, setLink] =  useState(['Home', 'Services', 'About' , "Contect" ]);
+const [link, setLink] =  useState(['Home', 'Services', 'About' ]);
 
 const[openNav , setOpenNav] =useState(false);
 const activeLink = ' text-[#f97316]  border-b-2  border-[#f97316]  border-solid        hidden    md:block  font-medium sm:text-[17px] md:text-[20px]    ';
