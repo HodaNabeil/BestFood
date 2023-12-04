@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { fetchProdcuts } from "../rtk/FoodSlices/ProductsFoodSlice";
 
 import {BsCartPlus} from 'react-icons/bs'
+import { addOrder } from "../rtk/FoodSlices/OrderFood";
 
 
 
@@ -90,7 +91,7 @@ function FilterMenu() {
             filteredMenu.map((foot)=> {
               return (
                 <div key={foot.id} 
-                className=' shadow-lg  rounded-lg rounded-t-lg  relative '>
+                    className=' shadow-lg  rounded-lg rounded-t-lg  relative '>
                     <BsCartPlus size={25} 
                     className=" absolute top-0 right-0 bg-orange-600 
                     w-[30px] h-[30px]  rounded-l-lg  
@@ -98,21 +99,22 @@ function FilterMenu() {
                     <img  src={foot.image} 
                     className=' object-cover max-w-full h-[300px] w-full rounded-sm '
                     alt={foot.name} />
-                      <div className='flex font-bold m-1  justify-between items-center  p-2 mb-1'>
-                        <p>{foot.name}</p>
-                        <p>
-                          <span 
-                            className="bg-orange-600 text-sm rounded-[50px] text-white p-1 ">
-                            {foot.price}$
-                          </span>
-                        </p>
-                      </div>
-                      <button 
-                      className="  text-[#f97316] m-[10px] border-[#f97316]  
-                      hover:text-[#fff] hover:bg-[#f97316]  
-                      transition duration-300">
-                          Add Order
-                      </button>
+                    <div className='flex font-bold m-1  justify-between items-center  p-2 mb-1'>
+                      <p>{foot.name}</p>
+                      <p>
+                        <span 
+                          className="bg-orange-600 text-sm rounded-[50px] text-white p-1 ">
+                          {foot.price}$
+                        </span>
+                      </p>
+                    </div>
+                    <button 
+                    onClick={()=> {dispatch(addOrder(foot))}}
+                    className="  text-[#f97316] m-[10px] border-[#f97316]  
+                    hover:text-[#fff] hover:bg-[#f97316]  
+                    transition duration-300">
+                        Add Order
+                    </button>
                 </div>
               )
             })

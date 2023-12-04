@@ -13,12 +13,12 @@ import { fetchProdcuts } from '../rtk/FoodSlices/ProductsFoodSlice';
 function Services() {
   const menu = useSelector((state) => state.allProducts);
   const dispatch = useDispatch();
-console.log(menu)
 
+  console.log(menu)
 
-  // useEffect((()=> {
-  //   dispatch(fetchProdcuts())
-  // }),[])
+  useEffect(() => {
+    dispatch(fetchProdcuts());
+  }, [dispatch]);
 
 
     

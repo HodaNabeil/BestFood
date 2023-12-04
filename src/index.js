@@ -15,10 +15,10 @@ import { Provider } from 'react-redux'
 import Home from './Page/Home';
 import Services from './Page/Services';
 
-import Contect from './Page/Contect';
 import Header from './components/Header';
 import { store } from './rtk/Store';
 import About from './components/About';
+import MenuOrder from './Page/MenuOrder';
 
 
 
@@ -54,24 +54,21 @@ const router = createBrowserRouter([
     path : '/contect',
     element : <div>
         <Header/>
-        <Contect/>
+        <MenuOrder/>
       </div>
   }
-  ,
-  {
-    path : '/contect',
-    element : <div>
-        <Header/>
-        <Contect/>
-      </div>
-  }
-  ,
+,
   {
     path : '/home',
     element : <div>
         <Home/>
-    
       </div>
+  },{
+    path: '/menuorder',
+    element:<>
+    <Header/>
+    <MenuOrder/>
+    </>
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -10,7 +10,7 @@ import ScrollTopButton from "../components/ScrollTopButton"
 
 function Home() {
   return (
-    <div className=" ">
+    <div className=" overflow-hidden">
       <Header/>
       <Hero/>
       <NewProduct/>
