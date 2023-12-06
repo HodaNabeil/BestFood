@@ -15,13 +15,10 @@ function Services() {
   const menu = useSelector((state) => state.allProducts.products);
   const dispatch = useDispatch();
 
-
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
 
-
-    
   return (
     <section className=" max-w-[1640px] m-auto p-4 pb-[0] relative overflow-hidden">
         <div className=' relative'>

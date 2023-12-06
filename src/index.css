@@ -2,6 +2,9 @@
 
 
 
+  @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;500;600&family=Nunito:ital,wght@0,400;0,500;1,600&family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@300;400;500&family=Rubik+Bubbles&family=Rubik:wght@400;500;600&family=Saira+Extra+Condensed:wght@300;400&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,6 +40,15 @@ scroll-behavior: smooth;
 .font_2 {
 font-family: 'Kaushan Script', cursive;
 }
+.font_3 {
+  font-family: "Nunito";
+}
 .servies h2 {
 font-family: 'Kaushan Script', cursive;
+}
+ion-icon {
+  font-size: 27px;
+}
+.img_menu {
+  height: calc(100vh - 75px);
 }
