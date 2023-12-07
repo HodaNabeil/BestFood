@@ -1,16 +1,16 @@
-import { MdOutlineEmail } from "react-icons/md";
+
 
 function InputFooter() {
   const validatedForm = (e) => {
     e.preventDefault()
   }
   return (
-    <div className="mt-[20px] flex flex-col  ">
+    <div className=" input_footer mt-[20px] flex flex-col  relative ">
     <h3 className="  font-medium  text-[#777] m-[10px]">SubScribe More info</h3>
       <form 
         onSubmit={validatedForm}
         className=' flex flex-col  relative'>
-        <MdOutlineEmail className=" absolute top-[12px] left-[10px]  text-[#777]   " />
+        <ion-icon name="mail-outline" size="small"></ion-icon>
         <input type="text" 
         placeholder=" Enter your Email" 
         className=" text-[15px] h-[40px] border-none 

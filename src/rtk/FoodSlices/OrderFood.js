@@ -20,6 +20,21 @@ export const  OrderSlice = createSlice({
     },
     clear: (state, action) => {
         return []
+    },
+    incrementquantity : (state , action) => {
+      const {productId} = { ...action.payload , quantiy : 1}
+      const product = state.find((item) => item.id === productId)
+      if(product) {
+        product.quantiy += 1;
+      }
+    }
+    ,
+    decreaseQuantity: (state , action) => {
+      const {productId} = { ...action.payload , quantiy : 1}
+      const product = state.find((item) => item.id === productId)
+      if (product && product.quantiy > 1) {
+        product.quantiy -= 1;
+      }
     }
   }
   }
@@ -27,6 +42,6 @@ export const  OrderSlice = createSlice({
 );
 
 
-export const  {addOrder , deleteOrder ,clear} = OrderSlice.actions;
+export const  {addOrder , deleteOrder ,clear ,incrementquantity ,decreaseQuantity} = OrderSlice.actions;
 
 export default OrderSlice.reducer

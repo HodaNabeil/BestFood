@@ -6,7 +6,7 @@
   object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height:  calc(100vh - 75px );
 }
 .menu_table {
   backdrop-filter: blur(20px);
@@ -20,7 +20,7 @@
   margin: 10px  auto;
   text-align: center;
   left: 200px;
-  width: 400px;
+  width: 600px;
   top: 50px;
   padding: 10px;
   padding-top: 2.5rem;
@@ -44,10 +44,24 @@
   box-shadow: 0 0 10px rgb(0, 0, 0,0.2);
   letter-spacing: 2px;
 }
-@media (max-width:450px) {
+
+@media (max-width:600px) {
   .menu_table {
     padding: 5px;
   max-width: 100%;
+  }
+  .menu_table th {
+    padding: 4px;
+  }
+  .menu_table td {
+    padding: 2px;
+    letter-spacing: 2;
+  }
+}
+
+@media (max-width:450px) {
+  .menu_table {
+    padding: 5px;
   }
   .menu_table th {
     padding: 2px;

@@ -1,5 +1,4 @@
-import { AiTwotonePhone } from "react-icons/ai";
-import { MdOutlineEmail } from "react-icons/md";
+
 
 function FooterColOne() {
   return (
@@ -19,7 +18,7 @@ function FooterColOne() {
       <h4 className="  text-[#f97316] font-medium text-[17px] mb-[10px]">Contact  Us</h4>
       <a href="/" 
         className="flex gap-x-2  text-[#f97316] items-center cursor-pointer ">
-        <AiTwotonePhone /> 
+        <ion-icon name="call-outline"  size="small"></ion-icon>
         <span className="text-[#777] text-[14px] ">
         +026567454
         </span> 
@@ -27,7 +26,7 @@ function FooterColOne() {
       <a href="/" 
         className="flex gap-x-2 text-[#f97316] 
         items-center  cursor-pointer ">
-        <MdOutlineEmail /> 
+        <ion-icon name="mail-outline" size="small"></ion-icon>
         <span className="text-[#777] text-[14px]">
         yourestorem.come 
         </span>

@@ -52,3 +52,39 @@ ion-icon {
 .img_menu {
   height: calc(100vh - 75px);
 }
+/*  Icon ServicesPange and FilterMenu Commponent */
+
+.services  > ion-icon  , .filetermenu  ion-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px;
+  border-top-left-radius: 4px;
+  background-color:#f97316;
+  color: #fff;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* Input Footer  */
+.input_footer  ion-icon {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: #777;
+}
+/* ScrollTop Icon */
+.scrollTop ion-icon {
+  position: fixed;
+  bottom: 40px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #f97316;
+  z-index: 40;
+  right: 27px;
+  padding: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}

@@ -1,23 +1,14 @@
 import { useEffect, useState} from "react";
 import { useDispatch, useSelector } from "react-redux"
 
-import {BsCartPlus} from 'react-icons/bs'
 import { addOrder } from "../rtk/FoodSlices/OrderFood";
 import { fetchProducts } from "../rtk/FoodSlices/ProductsFoodSlice";
-
-
-
 
 function FilterMenu() {
   const menu = useSelector((state) => state.allProducts.products);
   const { status, error } = useSelector((state) => state.allProducts.products);
 
-
-  
-
   const dispatch = useDispatch();
-
-  // console.log(menu)
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -29,8 +20,6 @@ function FilterMenu() {
 
   const productType = ["burger", "pizza", "salad", 'chicken' ,"All"];
   const priceRange = [2, 3, 4, 5];
-
-
 
   useEffect(() => {
     setFilteredMenu(menu);
@@ -58,7 +47,7 @@ function FilterMenu() {
     return <div>Error: {error}</div>;
   }
   return (
-        <div className="  max-w-[1640px] m-auto p-6">
+        <div className=" filetermenu  max-w-[1640px] m-auto p-6">
           
           <h2 className=' flex justify-center  mb-4 items-center m-auto text-[#f97316] 
             text-[25px] md:[35px] font-bold font_2'>Top Rated Menu Items</h2>
@@ -107,10 +96,7 @@ function FilterMenu() {
               return (
                 <div key={foot.id} 
                     className=' shadow-lg  rounded-lg rounded-t-lg  relative '>
-                    <BsCartPlus size={25} 
-                    className=" absolute top-0 right-0 bg-orange-600 
-                    w-[30px] h-[30px]  rounded-l-lg  
-                    p-1 cursor-pointer  text-white" />
+                  <ion-icon name="cart-outline"  > </ion-icon>
                     <img  src={foot.image} 
                     className=' object-cover max-w-full h-[300px] w-full rounded-sm '
                     alt={foot.name} />

@@ -1,9 +1,6 @@
 
-import ImgOrder from '../Img/menu.webp';
-
 import {useSelector , useDispatch} from 'react-redux';
-import { clear, deleteOrder } from '../rtk/FoodSlices/OrderFood';
-import { useState } from 'react';
+import { clear, decreaseQuantity, deleteOrder, incrementquantity } from '../rtk/FoodSlices/OrderFood';
 
 import '../Style/MenuOrder.css'
 import ScrollTopButton from '../components/ScrollTopButton';
@@ -11,12 +8,28 @@ import ScrollTopButton from '../components/ScrollTopButton';
 function MenuOrder() {
   const  order= useSelector((state ) => state.order );
   const dispatch =useDispatch()
-  console.log(order);
+  
+  const handleIncrement = (productId) => {
+    dispatch(incrementquantity({ productId }));
+  };
+  const handleDecrease = (productId) => {
+    dispatch(decreaseQuantity({ productId }));
+  };
+
   const totalPrice = order.reduce((acc,order)=> {
     acc += order.price * order.quantiy
-     return acc;
-   },0)
-  return (
+      return acc;
+    },0)
+  return order.length  === 0 ?  (
+    <div className=' background_img h-[100vh - 75px]  '> 
+      <p 
+        className='  absolute left-[50%] top-[50%]  translate-x-[-50%] 
+          translate-y-[-50%] flex justify-center items-center font_2 
+        text-white text-[30px] md:text-[50px] '>
+        The best foods order now
+      </p>
+    </div>
+  ): (
     <div className=' background_img relative  max-w-[1640px]     m-auto p-4'>
         <h2 
           className='  w-[90%] text-[#fff] flex justify-center items-center
@@ -34,7 +47,7 @@ function MenuOrder() {
           
         </p>
       <div>
-        <table className='  menu_table   sm:max-w-[100%] md:w-[400px]'>
+        <table className='  menu_table   sm:max-w-[100%] lg:w-[600px]'>
           <thead >
             <tr className=' font_2' >
               <th>type</th>
@@ -42,6 +55,7 @@ function MenuOrder() {
               <th>price</th>
               <th>action</th>
               <th> quantity </th>
+              <th>Number of meals</th>
             </tr>
           </thead>
           <tbody>
@@ -57,24 +71,24 @@ function MenuOrder() {
                       alt='img' /> 
                     
                   </td>
-            
                   <td>{order.price} $</td>
-                  <td>
+                  <td  className='flex '>
                     <button  className=' border-[#ffffff33]'   
                       onClick={()=> {dispatch(deleteOrder(order))}}> Delete 
                     </button>
+                    
                     </td>
                   <td>{order.quantiy}</td>
+                  <td className='flex items-center    gap-x-1 '>
+                    <button  className='border-[#ffffff33]' onClick={()=> handleIncrement(order.id)}>+</button>
+                    <button  className='border-[#ffffff33]' onClick={()=> handleDecrease(order.id)}>-</button>
+                  </td>
               </tr>
               )
             })
           }
-        
-    
         </tbody>
         </table>
-    
-    
         </div>
       <ScrollTopButton/>
     </div>

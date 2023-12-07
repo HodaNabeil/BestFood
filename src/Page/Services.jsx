@@ -1,7 +1,7 @@
 
 
 import  hero from '../Img/ser.jpg'
-import { BsCartPlus } from "react-icons/bs";
+
 import ScrollTopButton from '../components/ScrollTopButton';
 import Footer from '../components/Footer';
 
@@ -9,6 +9,9 @@ import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from 'react';
 import { fetchProducts } from '../rtk/FoodSlices/ProductsFoodSlice';
 import { addOrder } from '../rtk/FoodSlices/OrderFood';
+
+
+
 
 
 function Services() {
@@ -20,7 +23,7 @@ function Services() {
   }, [dispatch]);
 
   return (
-    <section className=" max-w-[1640px] m-auto p-4 pb-[0] relative overflow-hidden">
+    <section className="  max-w-[1640px] m-auto p-4 pb-[0] relative overflow-hidden">
         <div className=' relative'>
           <img  className=' object-cover w-full h-[500px] rounded-[8px]'
             src= {hero} alt="hero_img" />
@@ -41,10 +44,8 @@ function Services() {
             {
               menu.map((food)=> {
                 return (
-                  <div key={food.id} className=' shadow-lg   rounded-lg rounded-t-lg  relative '>
-                      <BsCartPlus size={25} 
-                        className=" absolute top-0 right-0 bg-orange-600  
-                        w-[30px] h-[30px]  rounded-l-lg  p-1 cursor-pointer  text-white" />
+                  <div key={food.id} className=' services shadow-lg   rounded-lg rounded-t-lg  relative '>
+                      <ion-icon name="cart-outline"  > </ion-icon>
                       <img  className=' object-cover max-w-full h-[300px] w-full rounded-sm '
                         src={food.image} alt={food.name} />
                         <div className='flex justify-between items-center  p-2 mb-1'>

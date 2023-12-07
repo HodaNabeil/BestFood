@@ -11,8 +11,14 @@ function CardOrder({setOpenNav ,openNav}) {
     <Link to={'/menuorder'} className=' bg-black text-white 
       flex gap-x-1 items-center justify-center text-center p-2 
       rounded-full w-[90px] '>
-      <span className=" absolute left-[10px] top-[-1px] text-[12px] md:text-[13px]  
-        bg-[#f97316] text-white  rounded-[50%] w-[20px] h-[20px]">  {numberOrder.length}</span>
+          {
+            numberOrder.length === 0 ? " " 
+            : 
+            <span className=" absolute left-[10px] top-[-1px] text-[12px] md:text-[13px]  
+          bg-[#f97316] text-white  rounded-[50%] w-[20px] h-[20px]"> 
+            {numberOrder.length}
+          </span>
+          }
       <ion-icon name="cart"
       className='text-[30px]   p-1 '  ></ion-icon> 
     </Link>

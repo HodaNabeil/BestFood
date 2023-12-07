@@ -25,12 +25,6 @@ export const productsSlice = createSlice({
     error: null,
   },
   reducers: {},
-  // extraReducers:(builder) => {
-  //   builder.addCase(fetchProdcuts.fulfilled, (state,action)=> {
-  //     return action.payload
-  //   })
-
-  // }
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state) => {

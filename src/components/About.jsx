@@ -14,11 +14,11 @@ function About() {
         </h2>
 
       <div 
-        className='  flex flex-col  lg:flex-row 
+        className='  flex   flex-col-reverse  lg:flex-row 
         md:justify-between lg:justify-center
         lg:gap-[80px] items-center gap-[50px]'>
         <div className=' '>
-        <img className=' rounded-xl w-[350px] md:w-[400px] max-w-full object-cover  '
+          <img className=' rounded-xl w-[100%] lg:w-[400px] max-w-full object-cover  '
         src={about} alt='img' />
         </div>
         <div>
