@@ -1,8 +1,8 @@
 
 
 import about from '../Img/about.jpg';
-import Footer from './Footer';
-import ScrollTopButton from './ScrollTopButton';
+import Footer from '../components/Footer';
+import ScrollTopButton from '../components/ScrollTopButton';
 
 function About() {
   return (
