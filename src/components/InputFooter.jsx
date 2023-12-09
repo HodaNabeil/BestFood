@@ -17,7 +17,7 @@ function InputFooter() {
         focus:outline-none px-[30px]  rounded-[50px]" />
         <input type="submit" 
         className=" flex   items-center justify-center
-        w-[100px]  ml-[10px] cursor-pointer my-[10px] 
+          max-w-[100px]  ml-[10px] cursor-pointer my-[10px] 
         text-center bg-[#f97316] text-[#fff] rounded-[50px] 
         text-[14px] p-[4px]"
           />

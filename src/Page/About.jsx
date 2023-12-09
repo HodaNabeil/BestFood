@@ -6,7 +6,7 @@ import ScrollTopButton from '../components/ScrollTopButton';
 
 function About() {
   return (
-    <section className=" max-w-[1640px] m-auto p-6  pb-[0]">
+    <section className=" max-w-[1640px] m-auto p-6  pb-[0] overflow-hidden">
         <h2 
         className='  font_2 font-bold text-[25px] md:text-[40px] 
         flex justify-center items-center m-[30px] '>
