@@ -13,11 +13,11 @@ function InputFooter() {
         <ion-icon name="mail-outline" size="small"></ion-icon>
         <input type="text" 
         placeholder=" Enter your Email" 
-        className=" text-[15px] h-[40px] border-none 
+        className=" text-[15px] h-[40px] border-none  max-w-[100%]
         focus:outline-none px-[30px]  rounded-[50px]" />
         <input type="submit" 
         className=" flex   items-center justify-center
-          max-w-[100px]  ml-[10px] cursor-pointer my-[10px] 
+        w-[100px]  ml-[10px] cursor-pointer my-[10px] 
         text-center bg-[#f97316] text-[#fff] rounded-[50px] 
         text-[14px] p-[4px]"
           />
