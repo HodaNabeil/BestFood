@@ -2,15 +2,12 @@ import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-import reportWebVitals from './reportWebVitals';
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import { Provider } from 'react-redux'
-
-
 
 // import Home from './Page/Home';
 // import Services from './Page/Services';
@@ -24,10 +21,6 @@ const LazyServices = React.lazy(() =>import('./Page/Services'));
 const LazyHome = React.lazy(()=> import("./Page/Home"));
 
 const LazyAbout = React.lazy(()=> import("./Page/About"));
-
-
-
-
 
 
 const router = createBrowserRouter([
@@ -96,4 +89,4 @@ root.render(
   </React.StrictMode>
 );
 
-reportWebVitals();
+

@@ -1,6 +1,6 @@
 
 
-import about from '../Img/about.jpg';
+import about  from '../Img/about.webp';
 import Footer from '../components/Footer';
 import ScrollTopButton from '../components/ScrollTopButton';
 

@@ -1,4 +1,4 @@
-import Landing from '../Img/Hero.webp';
+import Landing from '../Img/hero.jpg';
 
 function Hero() {
   return (

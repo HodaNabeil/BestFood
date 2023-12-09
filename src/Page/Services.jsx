@@ -1,6 +1,6 @@
 
 
-import  hero from '../Img/ser.jpg'
+import  hero from '../Img/ser.webp'
 
 import ScrollTopButton from '../components/ScrollTopButton';
 import Footer from '../components/Footer';
