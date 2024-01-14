@@ -9,9 +9,9 @@ export const  OrderSlice = createSlice({
     addOrder: (state , action) => {
       const findOrder = state.find((order) => order.id === action.payload.id);
       if(findOrder) {
-        findOrder.quantiy += 1
+        findOrder.quntity += 1
       }else{
-        const cloneOrder = {...action.payload , quantiy: 1}
+        const cloneOrder = {...action.payload ,quntity: 1}
         state.push(cloneOrder)
       }
     },
@@ -22,18 +22,18 @@ export const  OrderSlice = createSlice({
         return []
     },
     incrementquantity : (state , action) => {
-      const {productId} = { ...action.payload , quantiy : 1}
+      const {productId} = { ...action.payload ,quntity : 1}
       const product = state.find((item) => item.id === productId)
       if(product) {
-        product.quantiy += 1;
+        product.quntity += 1;
       }
     }
     ,
     decreaseQuantity: (state , action) => {
-      const {productId} = { ...action.payload , quantiy : 1}
+      const {productId} = { ...action.payload ,quntity : 1}
       const product = state.find((item) => item.id === productId)
-      if (product && product.quantiy > 1) {
-        product.quantiy -= 1;
+      if (product && product.quntity> 1) {
+        product.quntity -= 1;
       }
     }
   }

@@ -1,14 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;500;600&family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@300;400;500&family=Rubik:wght@400;500;600&display=swap');
 
-
-
   @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;500;600&family=Nunito:ital,wght@0,400;0,500;1,600&family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@300;400;500&family=Rubik+Bubbles&family=Rubik:wght@400;500;600&family=Saira+Extra+Condensed:wght@300;400&display=swap');
 
-
-
-
-
-  
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,9 +17,6 @@
   scroll-behavior: smooth;
 
 }
-
-
-
 
 @layer base {
 button {
@@ -58,7 +48,6 @@ ion-icon {
   height: calc(100vh - 75px);
 }
 /*  Icon ServicesPange and FilterMenu Commponent */
-
 
 .icon-card  ion-icon {
   font-size: 17px;

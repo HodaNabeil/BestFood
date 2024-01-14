@@ -17,7 +17,7 @@ function MenuOrder() {
   };
 
   const totalPrice = order.reduce((acc,order)=> {
-    acc += order.price * order.quantiy
+    acc += order.price * order.quntity
       return acc;
     },0)
   return order.length  === 0 ?  (
@@ -78,7 +78,7 @@ function MenuOrder() {
                     </button>
                     
                     </td>
-                  <td>{order.quantiy}</td>
+                  <td>{order.quntity}</td>
                   <td className='flex items-center    gap-x-1 '>
                     <button
                       className='border-[#ffffff33]' 

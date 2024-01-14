@@ -24,7 +24,7 @@ const Nav = ({openNav , setOpenNav}) => {
               md:felx md:relative  bg-black  md:bg-transparent  left-0 w-full 
             text-white rounded-[6px] duration-500 transition-all  
               ease-linear   md:flex-row  p-8 md:p-0   gap-x-[15px]
-              ${openNav ? '  top-[80px]' : 'top-[-100%]'}  transition-none duration-0     `}>
+              ${openNav ? '  top-[80px]' : 'top-[-100%] '}  transition-none duration-0     `}>
                   {
                   links.map((link, index) => (
                     <li key={index}  className=" p-4 md:p-0" 
