@@ -80,8 +80,16 @@ function MenuOrder() {
                     </td>
                   <td>{order.quantiy}</td>
                   <td className='flex items-center    gap-x-1 '>
-                    <button  className='border-[#ffffff33]' onClick={()=> handleIncrement(order.id)}>+</button>
-                    <button  className='border-[#ffffff33]' onClick={()=> handleDecrease(order.id)}>-</button>
+                    <button
+                      className='border-[#ffffff33]' 
+                      onClick={()=> handleIncrement(order.id)}>
+                        +
+                    </button>
+                    <button  
+                      className='border-[#ffffff33]' 
+                      onClick={()=> handleDecrease(order.id)}>
+                        -
+                      </button>
                   </td>
               </tr>
               )

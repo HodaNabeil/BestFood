@@ -5,6 +5,10 @@
   @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;500;600&family=Nunito:ital,wght@0,400;0,500;1,600&family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@300;400;500&family=Rubik+Bubbles&family=Rubik:wght@400;500;600&family=Saira+Extra+Condensed:wght@300;400&display=swap');
 
 
+
+
+
+  
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -55,16 +59,10 @@ ion-icon {
 }
 /*  Icon ServicesPange and FilterMenu Commponent */
 
-.services  > ion-icon  , .filetermenu  ion-icon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 4px;
-  border-top-left-radius: 4px;
-  background-color:#f97316;
-  color: #fff;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+
+.icon-card  ion-icon {
+  font-size: 17px;
+
 }
 /* Input Footer  */
 .input_footer  ion-icon {
@@ -89,3 +87,4 @@ ion-icon {
   cursor: pointer;
   scroll-behavior: smooth;
 }
+

@@ -16,7 +16,7 @@ export const  OrderSlice = createSlice({
       }
     },
     deleteOrder : (state, action ) => {
-      return  state.filter ((order => order.id !== action.payload.id))
+      return  state.filter ((product => product.id !== action.payload.id))
     },
     clear: (state, action) => {
         return []

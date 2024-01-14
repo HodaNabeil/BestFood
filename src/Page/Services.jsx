@@ -8,10 +8,7 @@ import Footer from '../components/Footer';
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from 'react';
 import { fetchProducts } from '../rtk/FoodSlices/ProductsFoodSlice';
-import { addOrder } from '../rtk/FoodSlices/OrderFood';
-
-
-
+import CardFood from '../components/CardFood';
 
 
 function Services() {
@@ -44,25 +41,7 @@ function Services() {
             {
               menu.map((food)=> {
                 return (
-                  <div key={food.id} className=' services shadow-lg   rounded-lg rounded-t-lg  relative '>
-                      <ion-icon name="cart-outline"  > </ion-icon>
-                      <img  className=' object-cover max-w-full h-[300px] w-full rounded-sm '
-                        src={food.image} alt={food.name} />
-                        <div className='flex justify-between items-center  p-2 mb-1'>
-                          <p>{food.name}</p>
-                          <p>
-                            <span className="bg-orange-600 rounded-lg text-white p-1 ">
-                              {food.price}$ 
-                            </span>
-                          </p>
-                        </div>
-                        <button
-                        onClick={()=> {dispatch(addOrder(food))}}
-                          className="  text-[#f97316] m-[10px] border-[#f97316]  
-                          hover:text-[#fff] hover:bg-[#f97316]  transition duration-300">
-                          Add Order
-                        </button>
-                  </div>
+                  <CardFood food={food} key={food.id}/>
                 )
             })
           }  
