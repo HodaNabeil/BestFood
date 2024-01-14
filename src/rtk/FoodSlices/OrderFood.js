@@ -7,11 +7,11 @@ export const  OrderSlice = createSlice({
   name: "OrderfoodSlice",
   reducers : {
     addOrder: (state , action) => {
-      const findOrder = state.find((order) => order.id === action.payload.id);
+      const findOrder = state.find((product) => product.id === action.payload.id);
       if(findOrder) {
-        findOrder.quntity += 1
+        findOrder.qauntity += 1
       }else{
-        const cloneOrder = {...action.payload ,quntity: 1}
+        const cloneOrder = {...action.payload ,qauntity: 1}
         state.push(cloneOrder)
       }
     },
@@ -22,18 +22,18 @@ export const  OrderSlice = createSlice({
         return []
     },
     incrementquantity : (state , action) => {
-      const {productId} = { ...action.payload ,quntity : 1}
+      const {productId} = { ...action.payload ,qauntity : 1}
       const product = state.find((item) => item.id === productId)
       if(product) {
-        product.quntity += 1;
+        product.qauntity += 1;
       }
     }
     ,
     decreaseQuantity: (state , action) => {
-      const {productId} = { ...action.payload ,quntity : 1}
+      const {productId} = { ...action.payload ,qauntity : 1}
       const product = state.find((item) => item.id === productId)
-      if (product && product.quntity> 1) {
-        product.quntity -= 1;
+      if (product && product.qauntity> 1) {
+        product.qauntity -= 1;
       }
     }
   }
